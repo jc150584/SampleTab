@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace SwitchingTabs
 {
-    public partial class MainPage : TabbedPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Tab2 : ContentPage
     {
-        public MainPage()
+        public Tab2()
         {
             InitializeComponent();
+            BindingContext = new Tab2ViewModel();
         }
     }
 }

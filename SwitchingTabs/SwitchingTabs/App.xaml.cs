@@ -11,9 +11,8 @@ namespace SwitchingTabs
     {
         public App()
         {
-            InitializeComponent();
-
-            MainPage = new SwitchingTabs.MainPage();
+            // The root page of your application
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
